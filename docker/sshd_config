@@ -5,12 +5,13 @@ X11Forwarding no
 AllowTcpForwarding no
 AllowAgentForwarding no
 PermitTunnel no
+LogLevel DEBUG
  
 Subsystem sftp internal-sftp
 Match Group sftp
-    ChrootDirectory %h
+    ChrootDirectory /uploads/%u
     X11Forwarding no
     AllowTcpForwarding no
     AllowAgentForwarding no
     PermitTunnel no
-    ForceCommand internal-sftp
+    ForceCommand internal-sftp -d /upload
