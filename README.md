@@ -11,6 +11,9 @@ $ docker-compose up -d
 ```
 $ ssh master@localhost -p 2222
 # password: master
+
+# or you can login as root to container instead
+$ docker-compose exec server bash
 ```
 
 #### Add a new SFTP user
